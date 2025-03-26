@@ -11,10 +11,10 @@ function NavbarPage() {
                 <Container className={styles.container}>
                     <Link to="/home">Ricardo Goicochea </Link>
                     <Nav className={styles.nav}>
-                        <Link to="/home">Home</Link>
-                        <Link to="/education"> Education</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/home"> Inicio </Link>
+                        <Link to="/education"> Educación </Link>
+                        <Link to="/projects"> Proyecto </Link>
+                        <Link to="/contact"> Contacto </Link>
                     </Nav>
                 </Container>
             </Navbar>

@@ -32,7 +32,7 @@ function Education() {
             <section className="container" style={{minHeight: "75vh"}}>
                 <div className="row" style={{minHeight: "75vh"}}>
                     <div className="col-md-6 col-12 d-flex flex-column justify-content-center align-items-start" >
-                        <h1> Education </h1>
+                        <h1> Educación </h1>
                         <h4> Soy un desarrollador autodidacta con formación universitaria, siempre en constante aprendizaje. Me he capacitado en plataformas como Udemy, YouTube, Edutin, Platzi y Netzun, combinando teoría y práctica para fortalecer mis habilidades. </h4>
                         <Icons />
                     </div>

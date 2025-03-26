@@ -24,6 +24,11 @@ h3 {
     font-size: clamp(1.25rem, 3vw, 2rem); /* 20px - 32px */
     font-weight: 500;
 }
+h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: 100;
+    line-height: 35px;
+}
   /* Párrafos */
 p {
     font-size: 1rem; /* 16px */
@@ -43,3 +48,5 @@ button, a {
         font-size: 14px; /* Reduce el tamaño base en móviles */
     }
 }
+
+

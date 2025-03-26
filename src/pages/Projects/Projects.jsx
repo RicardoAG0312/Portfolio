@@ -1,6 +1,7 @@
 import React from 'react'
 import MainLayout from '../../layouts/Main'
 import ProjectsImg from "../../assets/Developer activity-amico.svg";
+import WorkImg from "../../assets/Pair programming-amico.svg"
 import Icons from "../../components/Icons/Icons";
 import Card from "../../components/Projects/Card";
 import Button from 'react-bootstrap/Button';
@@ -67,9 +68,21 @@ function Projects() {
                             imagen3 = {Git}
                         />
                     </div>
-                    {/* <div className='text-center'>
-                        <Button style={{background: "#e7e7e7", border: "none", color: "black", marginTop: "20px"}} href='https://utpedupe-my.sharepoint.com/:f:/g/personal/u21214916_utp_edu_pe/EsmkSm7gdQRLjc80TUo2fdYB4pPPp5fJV6OvGFJLvlLTjg?e=bZqPeB' target='_blank'> ver más... </Button>
-                    </div> */}
+                    <div className='text-center'>
+                        <Button style={{background: "#e7e7e7", border: "none", color: "black", marginTop: "20px"}} href='https://github.com/RicardoAG0312?tab=repositories' target='_blank'> ver más... </Button>
+                    </div>
+        </section>
+        <hr/>
+        <section className='container mt-5 mb-5' style={{ minHeight: "75vh"}}>
+        <div className="row" style={{minHeight: "75vh"}}>
+                <div className="col-md-6 col-12 d-flex flex-column justify-content-center align-items-start" >
+                    <h1> Experiencia Laboral </h1>
+                    <h4> Comparto mi experiencia profesional, destacando los trabajos en los que he participado. He aplicado mis habilidades en desarrollo web y diseño de interfaces para crear soluciones efectivas, trabajando en equipo y enfrentando desafíos que me han permitido crecer profesionalmente. </h4>
+                </div>
+                <div className="col-md-6 col-12 p-0 d-flex flex-column justify-content-center align-items-center" >
+                    <img  src={WorkImg} alt="Code typing animation" />
+                </div>
+            </div>
         </section>
         </MainLayout>
     )

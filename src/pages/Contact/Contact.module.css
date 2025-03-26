@@ -1,0 +1,27 @@
+.boton {
+    background-color: #000;
+    border: 1px solid #4f4f4f;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -moz-transition: background-color 0.3s, color 0.3s;
+    -ms-transition: background-color 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, color 0.3s;
+}
+
+.boton:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Añade espacio entre los elementos del formulario */
+    margin-top: 20px;
+}
