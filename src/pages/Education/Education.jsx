@@ -1,4 +1,5 @@
 import React from 'react'
+import AnimatedSection from "../../components/AnimatedSection";
 import MainLayout from '../../layouts/Main'
 import EducationImg from '../../assets/education.svg'
 import Certificates from '../../components/Certificates/Certificates';
@@ -31,7 +32,7 @@ function Education() {
             <MainLayout>
             <section className="container" style={{minHeight: "75vh"}}>
                 <div className="row" style={{minHeight: "75vh"}}>
-                    <div className="col-md-6 col-12 d-flex flex-column justify-content-center align-items-start" >
+                    <div className="content-info-header col-md-6 col-12 d-flex flex-column justify-content-center align-items-start" >
                         <h1> Educación </h1>
                         <h4> Soy un desarrollador autodidacta con formación universitaria, siempre en constante aprendizaje. Me he capacitado en plataformas como Udemy, YouTube, Edutin, Platzi y Netzun, combinando teoría y práctica para fortalecer mis habilidades. </h4>
                         <Icons />
@@ -41,19 +42,22 @@ function Education() {
                     </div>
                 </div>
             </section>
+            <AnimatedSection direction="left">
             <section className='container mt-5 mb-5'>
                 <header className="p-3 text-center "> 
                     <h2> Lo que he aprendido en el camino </h2>
                 </header>
                 <Timeline position="alternate">
-                    <TimelineItem>
+                    <TimelineItem className={styles.time_line_item}>
                         <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         align="right"
                         variant="body2"
                         color="#6d6d6d"
                         >
-                        <img style={{width: "200px", height: "100px", objectFit: "contain"}} src={UTPLogo} alt="Code typing animation" />
+                            <AnimatedSection direction="top">    
+                                <img style={{width: "200px", height: "100px", objectFit: "contain"}} src={UTPLogo} alt="Code typing animation" />
+                            </AnimatedSection>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                         <TimelineConnector />
@@ -69,13 +73,15 @@ function Education() {
                             <Typography> 2021 - Actualidad </Typography>
                         </TimelineContent>
                     </TimelineItem>
-                    <TimelineItem>
+                    <TimelineItem className={styles.time_line_item}>
                         <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="#6d6d6d"
                         >
-                        <img className={styles.img} src={UdemyLogo} alt="Code typing animation" />
+                            <AnimatedSection direction="bottom">
+                                <img className={styles.img} src={UdemyLogo} alt="Code typing animation" />
+                            </AnimatedSection>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                         <TimelineConnector />
@@ -91,13 +97,15 @@ function Education() {
                         <Typography> 2022 - Actualidad </Typography>
                         </TimelineContent>
                     </TimelineItem>
-                    <TimelineItem>
+                    <TimelineItem >
                         <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
                         >
-                        <img style={{width: "75px", height: "100px", objectFit: "contain"}} src={NetzunLogo} alt="Code typing animation" />
+                            <AnimatedSection direction="top">
+                                <img className={styles.logo_netzun} src={NetzunLogo} alt="Code typing animation"/>
+                            </AnimatedSection>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                         <TimelineConnector />
@@ -113,13 +121,15 @@ function Education() {
                         <Typography> 2022 - Actualidad </Typography>
                         </TimelineContent>
                     </TimelineItem>
-                    <TimelineItem>
+                    <TimelineItem className={styles.time_line_item}>
                         <TimelineOppositeContent
                         sx={{ m: 'auto 0' }}
                         variant="body2"
                         color="text.secondary"
                         >
-                        <img className={styles.img} src={CourseraLogo} alt="Code typing animation" />
+                            <AnimatedSection direction="bottom">
+                                <img className={styles.img} src={CourseraLogo} alt="Code typing animation" />
+                            </AnimatedSection>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
                             <TimelineConnector />
@@ -137,46 +147,57 @@ function Education() {
                     </TimelineItem>
                 </Timeline>
             </section>
+            </AnimatedSection>
+            <AnimatedSection direction="right">
             <section className='container mt-5 mb-5'>
                 <header className="p-3 text-center "> 
                     <h2> Mis Certificados </h2>
                 </header>
                     <div className={styles.box_certificates}>
-                        <Certificates 
-                            titulo = "Certificado Desarrollo Web"
-                            imagen = {UdemyLogo}
-                            descripcion = "Adquirí habilidades en React para crear interfaces interactivas y dinámicas con componentes reutilizables."
-                        
-                        />
-                        <Certificates 
-                            titulo = "Certificado Flutter"
-                            imagen = {NetzunLogo}
-                            descripcion = "Aprendí a construir aplicaciones móviles multiplataforma con Flutter y Dart, dominando el diseño UI."
-                        
-                        />
-                        <Certificates 
-                            titulo = "Certificado Git"
-                            imagen = {CourseraLogo}
-                            descripcion = "Manejo eficiente del control de versiones, flujo de trabajo con ramas y colaboración en equipo utilizando Git"
-                        
-                        />
-                        <Certificates 
-                            titulo = "Certificado Inglés"
-                            imagen = {UTPLogo}
-                            descripcion = "Desarrollé habilidades de comunicación en inglés con fluidez en lectura, escritura y expresión oral a nivel B2."
-                        
-                        />
-                        <Certificates 
-                            titulo = "Certificado Excel"
-                            imagen = {UdemyLogo}
-                            descripcion = "Dominé el uso avanzado de Microsoft Excel optimizando la gestión y procesamiento de información."
-                        
-                        />
+                        <AnimatedSection direction="top">
+                            <Certificates 
+                                titulo = "Certificado Desarrollo Web"
+                                imagen = {UdemyLogo}
+                                descripcion = "Adquirí habilidades en React para crear interfaces interactivas y dinámicas con componentes reutilizables."
+                            />
+                        </AnimatedSection>
+                        <AnimatedSection direction="bottom">
+                            <Certificates 
+                                titulo = "Certificado Flutter"
+                                imagen = {NetzunLogo}
+                                descripcion = "Aprendí a construir aplicaciones móviles multiplataforma con Flutter y Dart, dominando el diseño UI."
+                            
+                            />
+                        </AnimatedSection>
+                        <AnimatedSection direction="top">
+                            <Certificates 
+                                titulo = "Certificado Git"
+                                imagen = {CourseraLogo}
+                                descripcion = "Manejo eficiente del control de versiones, flujo de trabajo con ramas y colaboración en equipo utilizando Git"
+                            
+                            />
+                        </AnimatedSection>
+                        <AnimatedSection direction="bottom">
+                            <Certificates 
+                                titulo = "Certificado Inglés"
+                                imagen = {UTPLogo}
+                                descripcion = "Desarrollé habilidades de comunicación en inglés con fluidez en lectura, escritura y expresión oral a nivel B2."
+                            
+                            />
+                        </AnimatedSection>
+                        <AnimatedSection direction="top">
+                            <Certificates 
+                                titulo = "Certificado Excel"
+                                imagen = {UdemyLogo}
+                                descripcion = "Dominé el uso avanzado de Microsoft Excel optimizando la gestión y procesamiento de información."
+                            />
+                        </AnimatedSection>
                     </div>
                     <div className='text-center'>
                         <Button style={{background: "#e7e7e7", border: "none", color: "black", marginTop: "20px"}} href='https://utpedupe-my.sharepoint.com/:f:/g/personal/u21214916_utp_edu_pe/EsmkSm7gdQRLjc80TUo2fdYB4pPPp5fJV6OvGFJLvlLTjg?e=bZqPeB' target='_blank'> ver más... </Button>
                     </div>
             </section>
+            </AnimatedSection>
             </MainLayout>
         </>
     )

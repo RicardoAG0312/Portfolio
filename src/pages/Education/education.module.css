@@ -43,3 +43,25 @@
     height: 100%;
     object-fit: contain; 
 }
+
+.logo_netzun {
+    width: 75px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Estilos para teléfonos pequeños */
+@media (width <= 480px) {
+    .time_line_item img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .logo_netzun {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .box_certificates .card {
+        /* height: 300px; */
+        width: 230px !important;
+    }
+}

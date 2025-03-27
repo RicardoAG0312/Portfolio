@@ -25,3 +25,10 @@ form {
     gap: 10px; /* Añade espacio entre los elementos del formulario */
     margin-top: 20px;
 }
+
+/* Estilos para teléfonos pequeños */
+@media (width <= 480px) {
+    form {
+        margin-top: 0px !important;
+    }
+}

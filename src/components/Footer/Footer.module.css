@@ -6,3 +6,10 @@
     align-items: center;
     color: black;
 }
+
+/* Estilos para teléfonos pequeños */
+@media (width <= 480px) {
+    footer {
+        text-align: center;
+    }
+}
